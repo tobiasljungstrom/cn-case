@@ -1,0 +1,10 @@
+.card {
+  padding: var(--spacing-m);
+  padding-top: 0;
+
+  background-color: var(--white);
+  border-radius: var(--spacing-xs);
+  box-shadow: var(--shadow-elevation-low);
+
+  overflow: hidden;
+}

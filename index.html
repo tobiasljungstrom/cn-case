@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chargenode Case</title>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/utility.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+
+    <link href="https://unpkg.com/css.gg/icons/all.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <h1>Dashboard</h1>
+      <i class="gg-bolt"></i>
+      <i class="gg-menu"></i>
+    </header>
+    <main>
+      <section class="station">
+        <h2 class="station-title">Station TK-421</h2>
+
+        <div class="info card">
+          <h3>Sessions</h3>
+          <div class="sessions-active">
+            <span class="sessions-active-num">5</span>
+            <span class="sessions-active-text">Active</span>
+          </div>
+          <div class="sessions-complete">
+            <span class="sessions-complete-num">36</span>
+            <span class="sessions-complete-text">Complete</span>
+          </div>
+        </div>
+
+        <div
+          class="effect card"
+          style="--effect-max: 550; --effect-current: 325"
+        >
+          <h3>Effect</h3>
+          <div class="effect-legend">
+            <span>550A</span>
+            <span>0A</span>
+          </div>
+          <div class="effect-graph">
+            <div class="effect-graph-color">325A</div>
+          </div>
+        </div>
+        <div class="card graph">
+          <h3>Effect over time</h3>
+          <div class="graph-container">
+            <svg
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 500 100"
+              preserveAspectRatio="none"
+            >
+              <polygon
+                class="graph-content"
+                points="0 100, 0 10, 100 30, 200 10, 300 60, 400 70, 500 30, 500 100"
+                fill="url(#green)"
+              />
+
+              <linearGradient id="green" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0%" stop-color="#b1f965" />
+                <stop offset="100%" stop-color="#8cdb3d" />
+              </linearGradient>
+            </svg>
+          </div>
+        </div>
+      </section>
+      <section>
+        <ol>
+          <li>Session 1</li>
+        </ol>
+        <div>Session stats</div>
+      </section>
+    </main>
+  </body>
+</html>
