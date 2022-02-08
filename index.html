@@ -71,11 +71,24 @@
           </div>
         </div>
       </section>
-      <section>
-        <ol>
-          <li>Session 1</li>
+      <section class="session">
+        <ol class="session-list card card-border">
+          {%- for session in sessions -%}
+          <li class="session-item">
+            <h4>{{ session.Id }}</h4>
+            <div class="session-item-info">
+              <span>{{ session.Started | date: "%a, %b %d"}}</span>
+              <span>{{ session.EnergyChargedInkWh }} kwH</span>
+            </div>
+          </li>
+          {%- endfor -%}
         </ol>
-        <div>Session stats</div>
+        <div class="session-info card card-border">
+          <div class="widget card card-border">Widget</div>
+          <div class="widget card card-border">Widget</div>
+          <div class="widget card card-border">Widget</div>
+          <div class="widget card card-border">Widget</div>
+        </div>
       </section>
     </main>
   </body>

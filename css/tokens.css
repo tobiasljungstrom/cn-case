@@ -4,6 +4,7 @@
 
   /* COLORS */
   --white: hsl(100deg, 0%, 100%);
+  --gray-25: hsl(100deg, 2%, 97%);
   --gray-50: hsl(100deg, 2%, 94%);
   --gray-100: hsl(100deg, 2%, 92%);
   --gray-150: hsl(100deg, 2%, 89%);

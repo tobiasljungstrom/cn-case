@@ -177,13 +177,6 @@ section.station h2 {
   background-image: linear-gradient(
     0deg,
     hsl(90deg 69% 55%) 0%,
-    hsl(90deg 73% 57%) 13%,
-    hsl(90deg 75% 59%) 25%,
-    hsl(90deg 78% 61%) 37%,
-    hsl(90deg 81% 62%) 50%,
-    hsl(89deg 85% 64%) 63%,
-    hsl(89deg 87% 66%) 75%,
-    hsl(89deg 90% 68%) 87%,
     hsl(89deg 94% 69%) 100%
   );
 }
@@ -203,4 +196,70 @@ section.station h2 {
 .graph.card .graph-container svg {
   width: 100%;
   height: 100%;
+}
+
+/* SESSION SECTION */
+
+section.session {
+  display: grid;
+  grid-template-columns: minmax(200px, 350px) minmax(200px, 350px) minmax(
+      500px,
+      1fr
+    );
+  grid-template-areas: "list details details";
+
+  gap: var(--spacing-m);
+
+  padding: var(--spacing-m);
+}
+
+@media screen and (max-width: 1024px) {
+  section.session {
+    grid-template-columns: minmax(100px, 350px) minmax(200px, 350px) minmax(
+        10px,
+        1fr
+      );
+  }
+}
+
+.session-list {
+  grid-area: list;
+  overflow-y: auto;
+
+  padding: 0;
+}
+
+.session-list li {
+  list-style: none;
+  padding: var(--spacing-s) var(--spacing-m);
+}
+
+.session-list li:nth-of-type(2n) {
+  background-color: var(--gray-25);
+}
+
+.session-list li:hover {
+  background-color: var(--gray-100);
+}
+
+.session-list h4 {
+  font-weight: 500;
+}
+
+.session-info {
+  grid-area: details;
+
+  display: grid;
+  gap: var(--spacing-m);
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.session-item-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.widget {
+  display: grid;
+  place-items: center;
 }
